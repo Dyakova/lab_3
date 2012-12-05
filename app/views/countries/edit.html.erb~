@@ -2,11 +2,6 @@
 
 <%= render 'form' %>
 
-
-<p>
-  <b>State:</b>
-  <%= @country.state %>
-</p>
 <%= link_to 'Show', @country %> |
 <%= link_to 'Back', countries_path %> |
 <%= link_to 'Unpublish', :action => :unpublish, :id => @country.id %> |

@@ -80,32 +80,4 @@ class CountriesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  def unpublish
-    @country = Country.find(params[:id])
-    @country.unpublish
-    respond_to do |format|
-      if @country.unpublished?
-        format.html { redirect_to @country, notice: 'Country was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @country.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  def remove
-    @country = Country.find(params[:id])
-    @country.remove
-    respond_to do |format|
-      if @country.deleted?
-        format.html { redirect_to @country, notice: 'Country was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @country.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 end

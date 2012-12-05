@@ -11,11 +11,5 @@
 </p>
 
 
-<p>
-  <b>State:</b>
-  <%= @country.state %>
-</p>
-
-
 <%= link_to 'Edit', edit_country_path(@country) %> |
 <%= link_to 'Back', countries_path %>
