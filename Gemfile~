@@ -18,13 +18,15 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :production, :staging do
-  gem "pg"
-end
 
-group :development, :test do
-  gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
-end
+gem 'sqlite3-ruby', '1.3.2', :group => :development
+#group :production, :staging do
+#  gem "pg"
+#end
+
+#group :development, :test do
+#  gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
+#end
 
 gem 'jquery-rails'
 gem 'state_machine'
