@@ -46,14 +46,4 @@ class CountriesControllerTest < ActionController::TestCase
 
     assert_redirected_to countries_path
   end
-
-  test "should unpublish country" do
-    get :unpublish, id: @country
-    assert_equal 'Country was successfully updated.', flash[:notice]
-  end;
-
-  test "should remove country" do
-    get :remove, id: @country
-    assert_equal 'Country was successfully updated.', flash[:notice]
-  end;
 end

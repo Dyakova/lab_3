@@ -1,9 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  language: MyString
+  name: Spain
+  language: spanish
+  state: published
 
 two:
-  name: MyString
-  language: MyString
+  name: Venezuella
+  language: spanish
+  state: published
+
+three:
+  name: USA
+  language: english
+  state: published
