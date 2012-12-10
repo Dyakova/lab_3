@@ -1,4 +1,3 @@
 lab_3
 =====
-
-labgmldfjtgrggsdlgjnlksdjgs_3 ruby
+[![Build Status](https://secure.travis-ci.org/Dyakova/lab_3.png?branch=master)](https://travis-ci.org/Dyakova/lab_3)
