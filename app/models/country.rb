@@ -1,13 +1,11 @@
 require 'state_machine'
 
 class Country < ActiveRecord::Base
-    validates_presence_of :language, :name, :state
-    validates :name, :format => { :with => /([A-Z]){1}([a-z]){1,}/, :message => "There is the country, use the capital char" }
-    validates_uniqueness_of :name, :message => "There is that country in the list";
+    validates :name, :presence => true, :uniqueness => true, :format => { :with => /^([A-Z]){1}([a-z]){1,}$/, :message => "should start with capital char"}
+    validates :language, :presence => true, :length => { :minimum => 2 }, :format => { :with => /^([a-z]){2,}$/, :message => "should use lower case letters only"}
+    validates :state, :presence => true
 
     attr_accessible :language, :name
-
-    validates_presence_of :name, :language, :state
 
     state_machine :initial => :published do
         state :published, :human_name => 'is new'
